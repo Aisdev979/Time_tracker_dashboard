@@ -1,0 +1,249 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light--red: hsl(15, 100%, 70%);
+    --Soft--blue: hsl(195, 74%, 62%);
+    --Light--Red: hsl(348, 100%, 68%);
+    --Lime--green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft--orange: hsl(43, 84%, 65%);
+
+    /* Neutral */
+
+    --Very--dark--blue: hsl(226, 43%, 10%);
+    --Dark--blue: hsl(235, 46%, 20%);
+    --Desaturated--blue: hsl(235, 45%, 61%);
+    --Pale--Blue: hsl(236, 100%, 87%);
+
+    /* Typography */
+    --title--fz: 1.125rem;
+    --fw--1: 300;
+    --fw--2: 400;
+    --fw--3: 500;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: var(--Very--dark--blue);
+    color: var(--Pale--Blue);
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 3em;
+    font-weight: var(--fw--1);
+}
+
+.profile {
+    background-color: var(--Dark--blue);
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+.profile__details {
+    background-color: var(--Blue);
+    border-radius: 1em;
+    line-height: 1.5em;
+}
+
+.profile__details img{
+    max-width: 20%;
+    border: 2px solid var(--Pale--Blue);
+    border-radius: 50px;
+}
+
+.profile__details h1 {
+    font-size: var(--fw--2);
+}
+
+.profile__details,
+.profile__time--record {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5em;
+}
+
+.profile__time--record p {
+    cursor: pointer;
+    color: var(--Desaturated--blue)
+}
+
+.profile__time--record p:hover {
+    color: var(--Pale--Blue);
+}
+
+.time {
+    border-radius: 1em 1em 0 0;
+    position: relative;
+    margin-bottom: 8em;
+    margin-top: 2em;
+}
+
+.work__color {
+    background-color: var(--Light--red);
+}
+
+.play__color {
+    background-color: var(--Soft--blue);
+}
+
+.study__color {
+    background-color: var(--Light--Red);
+}
+
+.exercise__color {
+    background-color: var(--Lime--green);
+    margin-bottom: 9.5em;
+}
+
+.social__color {
+    background-color: var(--Violet);
+    margin-bottom: 7em;
+}
+
+.self__color {
+    background-color: var(--Soft--orange);
+}
+
+.play__image {
+    display: block;
+    margin: auto;
+    margin-right: 1em;
+}
+
+.time__record {
+    width: 100%;
+    background-color: var(--Dark--blue);
+    padding: 1.5em;
+    border-radius: 1em;
+    line-height: 3em;
+    z-index: 2;
+    position: absolute;
+    top: 2.5em;
+}
+
+.time__record:hover {
+    cursor: pointer;
+    background-color: var(--Desaturated--blue);
+}
+
+.time__title,
+.time__values {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time__title h2 {
+    font-size: var(--title--fz);
+}
+
+.time__values p + p {
+    font-size: 0.8em;
+}
+
+.para {
+    font-size: 2.5em;
+    font-weight: var(--fw--3);
+}
+
+footer {
+    margin-top: 10em;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    background-color: var(--Dark--blue);
+    padding: 2em;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media(min-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 1em;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 2em;
+    }
+
+    .profile {
+        margin-top: 2em;
+    }
+
+    .profile__details,
+    .profile__time--record {
+        display: block;
+        line-height: 2.5em;
+    }
+
+    .profile__details img {
+        max-width: 50%;
+        border-radius: 70px;
+    }
+
+    .profile__details h1 {
+        font-size: 2em;
+    }
+}
+
+@media(min-width: 800px) {
+    .container {
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        gap: 1em;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+    }
+
+    .profile__details img {
+        max-width: 60%;
+        border-radius: 80px;
+    }
+
+    .profile__details h1 {
+        width: 50%;
+    }
+
+    .profile__time--record {
+        padding-bottom: 3em;
+    }
+
+    .time__values {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time__values p {
+        width: 100%;
+        text-align: left;
+    }
+
+    div p {
+        font-size: 1.5em;
+    }
+}
